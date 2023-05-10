@@ -3,7 +3,7 @@ module github.com/burningass23/franz-go/pkg/sasl/kerberos
 go 1.18
 
 require (
-	github.com/burningass23/gokrb5/v8 v8.0.0-20230510135307-e1276b34e585
+	github.com/burningass23/gokrb5/v8 1c46d63
 	github.com/burningass23/franz-go v1.13.0
 )
 
