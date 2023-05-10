@@ -9,10 +9,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/jcmturner/gokrb5/v8/client"
-	"github.com/jcmturner/gokrb5/v8/gssapi"
-	"github.com/jcmturner/gokrb5/v8/messages"
-	"github.com/jcmturner/gokrb5/v8/types"
+	"github.com/burningass23/gokrb5/v8/client"
+	"github.com/burningass23/gokrb5/v8/gssapi"
+	"github.com/burningass23/gokrb5/v8/messages"
+	"github.com/burningass23/gokrb5/v8/types"
 
 	"github.com/burningass23/franz-go/pkg/sasl"
 )

@@ -753,9 +753,9 @@ for an almost entirely unused package, I figured it is _okayish_ to technically
 break compatibility for the few usages of this package, when the fix can be
 done entirely when `go get`ing.
 
-The [gokrb5](https://github.com/jcmturner/gokrb5) library, basically the only
+The [gokrb5](https://github.com/burningass23/gokrb5) library, basically the only
 library in the Go ecosystem that implements Kerberos, has a slightly [broken
-license](https://github.com/jcmturner/gokrb5/issues/461). Organizations that
+license](https://github.com/burningass23/gokrb5/issues/461). Organizations that
 are sensitive to this were required to not use franz-go even if they did not
 use Kerberos because franz-go pulls in a dependency on gokrb5.
 
