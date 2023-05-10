@@ -199,7 +199,7 @@ func (s *session) Challenge(resp []byte) (bool, []byte, error) {
 	s.step++
 	switch step {
 	case 0:
-		var challenge gssapi.WrapToken
+		var challenge gssapi.WrapTokenV1
 		if err := challenge.Unmarshal(resp, true); err != nil {
 			return false, nil, err
 		}
@@ -207,7 +207,7 @@ func (s *session) Challenge(resp []byte) (bool, []byte, error) {
 		if !isValid {
 			return false, nil, err
 		}
-		response, err := gssapi.NewInitiatorWrapToken(challenge.Payload, s.encKey)
+		response, err := gssapi.NewInitiatorWrapTokenV1(challenge.Payload, s.encKey)
 		if err != nil {
 			return false, nil, err
 		}
