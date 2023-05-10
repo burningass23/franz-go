@@ -14,7 +14,7 @@ import (
 	"github.com/jcmturner/gokrb5/v8/messages"
 	"github.com/jcmturner/gokrb5/v8/types"
 
-	"github.com/twmb/franz-go/pkg/sasl"
+	"github.com/burningass23/franz-go/pkg/sasl"
 )
 
 // Auth contains a Kerberos client and the service name that we will use to get

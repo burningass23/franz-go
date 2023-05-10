@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kmsg"
-	"github.com/twmb/franz-go/pkg/kversion"
-	"github.com/twmb/franz-go/pkg/sasl"
+	"github.com/burningass23/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kversion"
+	"github.com/burningass23/franz-go/pkg/sasl"
 )
 
 // Opt is an option to configure a client.
@@ -416,7 +416,7 @@ func softwareVersion() string {
 	info, ok := debug.ReadBuildInfo()
 	if ok {
 		for _, dep := range info.Deps {
-			if dep.Path == "github.com/twmb/franz-go" {
+			if dep.Path == "github.com/burningass23/franz-go" {
 				if reVersion.MatchString(dep.Version) {
 					return dep.Version
 				}

@@ -6,8 +6,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kbin"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kbin"
+	"github.com/burningass23/franz-go/pkg/kmsg"
 )
 
 type (

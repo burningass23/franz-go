@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kgo"
-	"github.com/twmb/franz-go/pkg/sasl/plain"
+	"github.com/burningass23/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/sasl/plain"
 )
 
 var (

@@ -11,7 +11,7 @@ package kphuslog
 
 import (
 	"github.com/phuslu/log"
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kgo"
 )
 
 // Logger provides the kgo.Logger interface for usage in kgo.WithLogger when

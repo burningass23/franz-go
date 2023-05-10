@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kgo"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 	"go.opentelemetry.io/otel/metric/global"

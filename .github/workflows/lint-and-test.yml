@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   golangci:
-    if: github.repository == 'twmb/franz-go'
+    if: github.repository == 'burningass23/franz-go'
     runs-on: ubuntu-latest
     name: "golangci-lint on amd64"
     steps:
@@ -30,7 +30,7 @@ jobs:
           args: --timeout=5m
 
   integration-test-kafka:
-    if: github.repository == 'twmb/franz-go'
+    if: github.repository == 'burningass23/franz-go'
     needs: golangci
     runs-on: ubuntu-latest
     name: "integration test kafka"
@@ -62,7 +62,7 @@ jobs:
           KGO_TEST_STABLE_FETCH: true
 
   integration-test-redpanda:
-    if: github.repository == 'twmb/franz-go'
+    if: github.repository == 'burningass23/franz-go'
     needs: golangci
     runs-on: ubuntu-latest
     name: "integration test redpanda"

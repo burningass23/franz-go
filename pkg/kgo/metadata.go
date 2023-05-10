@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kerr"
+	"github.com/burningass23/franz-go/pkg/kerr"
 )
 
 type metawait struct {

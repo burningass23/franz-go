@@ -1,8 +1,8 @@
 package kfake
 
 import (
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kerr"
+	"github.com/burningass23/franz-go/pkg/kmsg"
 )
 
 // TODO

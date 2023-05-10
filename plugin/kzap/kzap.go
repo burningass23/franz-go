@@ -17,7 +17,7 @@ package kzap
 import (
 	"go.uber.org/zap"
 
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kgo"
 )
 
 // Logger provides the kgo.Logger interface for usage in kgo.WithLogger when

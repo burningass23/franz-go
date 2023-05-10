@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kgo"
-	"github.com/twmb/franz-go/plugin/kprom"
+	"github.com/burningass23/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/plugin/kprom"
 )
 
 var (

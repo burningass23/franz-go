@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kgo"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kerr"
+	"github.com/burningass23/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kmsg"
 )
 
 // TopicID is the 16 byte underlying topic ID.

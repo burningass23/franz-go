@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/prometheus/client_golang v1.14.0
-	github.com/twmb/franz-go v1.13.0
+	github.com/burningass23/franz-go v1.13.0
 )
 
 require (
@@ -17,7 +17,7 @@ require (
 	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/common v0.42.0 // indirect
 	github.com/prometheus/procfs v0.9.0 // indirect
-	github.com/twmb/franz-go/pkg/kmsg v1.4.0 // indirect
+	github.com/burningass23/franz-go/pkg/kmsg v1.4.0 // indirect
 	golang.org/x/sys v0.6.0 // indirect
 	google.golang.org/protobuf v1.29.1 // indirect
 )

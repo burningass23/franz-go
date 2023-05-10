@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kmsg"
 )
 
 // TODO

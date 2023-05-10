@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kmsg"
 )
 
 // This simple test hits every branch of cooperative-sticky's adjustCooperative

@@ -6,9 +6,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kadm"
-	"github.com/twmb/franz-go/pkg/kgo"
-	"github.com/twmb/franz-go/pkg/kversion"
+	"github.com/burningass23/franz-go/pkg/kadm"
+	"github.com/burningass23/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kversion"
 )
 
 func die(msg string, args ...any) {

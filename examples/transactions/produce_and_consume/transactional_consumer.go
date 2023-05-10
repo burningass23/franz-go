@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kgo"
 )
 
 func startConsuming(ctx context.Context, brokers []string, group, topic string) {

@@ -1,11 +1,11 @@
 package kotel
 
 import (
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kgo"
 )
 
 const (
-	instrumentationName = "github.com/twmb/franz-go/plugin/kotel"
+	instrumentationName = "github.com/burningass23/franz-go/plugin/kotel"
 )
 
 // Kotel represents the configuration options available for the kotel plugin.

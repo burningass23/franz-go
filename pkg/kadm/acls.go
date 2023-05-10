@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kerr"
+	"github.com/burningass23/franz-go/pkg/kmsg"
 )
 
 // ACLBuilder is a builder that is used for batch creating / listing / deleting

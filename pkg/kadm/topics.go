@@ -5,8 +5,8 @@ import (
 	"errors"
 	"sort"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kerr"
+	"github.com/burningass23/franz-go/pkg/kmsg"
 )
 
 // ListTopics issues a metadata request and returns TopicDetails. Specific

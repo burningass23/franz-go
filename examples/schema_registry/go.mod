@@ -4,8 +4,8 @@ go 1.20
 
 require (
 	github.com/hamba/avro v1.8.0
-	github.com/twmb/franz-go v1.13.0
-	github.com/twmb/franz-go/pkg/sr v0.0.0-20230314042146-d84506940f2d
+	github.com/burningass23/franz-go v1.13.0
+	github.com/burningass23/franz-go/pkg/sr v0.0.0-20230314042146-d84506940f2d
 )
 
 require (
@@ -14,5 +14,5 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pierrec/lz4/v4 v4.1.17 // indirect
-	github.com/twmb/franz-go/pkg/kmsg v1.4.0 // indirect
+	github.com/burningass23/franz-go/pkg/kmsg v1.4.0 // indirect
 )

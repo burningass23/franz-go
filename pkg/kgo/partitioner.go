@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/twmb/franz-go/pkg/kbin"
+	"github.com/burningass23/franz-go/pkg/kbin"
 )
 
 // Partitioner creates topic partitioners to determine which partition messages

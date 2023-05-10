@@ -11,7 +11,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kmsg"
 	"golang.org/x/crypto/pbkdf2"
 )
 

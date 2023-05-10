@@ -16,7 +16,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/twmb/franz-go/pkg/kbin"
+	"github.com/burningass23/franz-go/pkg/kbin"
 )
 
 ////////////

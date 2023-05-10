@@ -22,7 +22,7 @@
 //	        // ...other opts
 //	)
 //
-// More examples are linked in the main project readme: https://github.com/twmb/franz-go/#metrics--logging
+// More examples are linked in the main project readme: https://github.com/burningass23/franz-go/#metrics--logging
 //
 // By default, metrics are installed under the a new prometheus registry, but
 // this can be overridden with the Registry option.
@@ -42,7 +42,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kgo"
 )
 
 var ( // interface checks to ensure we implement the hooks properly

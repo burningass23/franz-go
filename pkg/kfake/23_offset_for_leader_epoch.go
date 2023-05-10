@@ -3,8 +3,8 @@ package kfake
 import (
 	"sort"
 
-	"github.com/twmb/franz-go/pkg/kerr"
-	"github.com/twmb/franz-go/pkg/kmsg"
+	"github.com/burningass23/franz-go/pkg/kerr"
+	"github.com/burningass23/franz-go/pkg/kmsg"
 )
 
 func init() { regKey(23, 3, 4) }

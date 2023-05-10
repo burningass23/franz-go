@@ -1,7 +1,7 @@
 package kotel
 
 import (
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kgo"
 )
 
 // RecordCarrier injects and extracts traces from a kgo.Record.

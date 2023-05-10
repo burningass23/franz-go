@@ -3,7 +3,7 @@ package klogr
 
 import (
 	"github.com/go-logr/logr"
-	"github.com/twmb/franz-go/pkg/kgo"
+	"github.com/burningass23/franz-go/pkg/kgo"
 )
 
 var _ kgo.Logger = (*Logger)(nil)
