@@ -207,7 +207,7 @@ func (s *session) Challenge(resp []byte) (bool, []byte, error) {
 		if !isValid {
 			return false, nil, err
 		}
-		response, err := gssapi.NewInitiatorWrapTokenV1(challenge.Payload, s.encKey)
+		response, err := gssapi.NewInitiatorWrapTokenV1(challenge, s.encKey)
 		if err != nil {
 			return false, nil, err
 		}
