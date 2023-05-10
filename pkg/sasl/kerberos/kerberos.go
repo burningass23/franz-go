@@ -211,7 +211,7 @@ func (s *session) Challenge(resp []byte) (bool, []byte, error) {
 		if err != nil {
 			return false, nil, err
 		}
-		marshalled, err := response.Marshal()
+		marshalled, err := response.Marshal(s.encKey)
 		return true, marshalled, err // we are done, but we have one more response to write ourselves
 	default:
 		return false, nil, fmt.Errorf("challenge / response should be done, but still going at %d", step)
