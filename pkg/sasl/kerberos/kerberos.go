@@ -9,12 +9,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/burningass23/gokrb5/v8/client"
-	"github.com/burningass23/gokrb5/v8/gssapi"
-	"github.com/burningass23/gokrb5/v8/messages"
-	"github.com/burningass23/gokrb5/v8/types"
+	"github.com/jcmturner/gokrb5/v8/client"
+	"github.com/jcmturner/gokrb5/v8/gssapi"
+	"github.com/jcmturner/gokrb5/v8/messages"
+	"github.com/jcmturner/gokrb5/v8/types"
 
-	"github.com/burningass23/franz-go/pkg/sasl"
+	"github.com/twmb/franz-go/pkg/sasl"
 )
 
 // Auth contains a Kerberos client and the service name that we will use to get
@@ -194,25 +194,43 @@ type session struct {
 	encKey types.EncryptionKey
 }
 
+//Поддержка Wrap Token V1
 func (s *session) Challenge(resp []byte) (bool, []byte, error) {
 	step := s.step
 	s.step++
 	switch step {
 	case 0:
-		var challenge gssapi.WrapTokenV1
-		if err := challenge.Unmarshal(resp, true); err != nil {
-			return false, nil, err
+		if resp[0] == 0x60 {
+			wrapTokenReq := gssapi.WrapTokenV1{}
+			if err := wrapTokenReq.Unmarshal(resp, true); err != nil {
+				return false, nil, err
+			}
+			isValid, err := wrapTokenReq.Verify(s.encKey, 23) // 23 == GSSAPI ACCEPTOR SIGN
+			if !isValid {
+				return false, nil, err
+			}
+			response, err := gssapi.NewInitiatorWrapTokenV1(&wrapTokenReq, s.encKey)
+			if err != nil {
+				return false, nil, err
+			}
+			marshalled, err := response.Marshal(s.encKey)
+			return true, marshalled, err
+		} else {
+			var challenge gssapi.WrapToken
+			if err := challenge.Unmarshal(resp, true); err != nil {
+				return false, nil, err
+			}
+			isValid, err := challenge.Verify(s.encKey, 22) // 22 == GSSAPI ACCEPTOR SEAL
+			if !isValid {
+				return false, nil, err
+			}
+			response, err := gssapi.NewInitiatorWrapToken(challenge.Payload, s.encKey)
+			if err != nil {
+				return false, nil, err
+			}
+			marshalled, err := response.Marshal()
+			return true, marshalled, err
 		}
-		isValid, err := challenge.Verify(s.encKey, 22) // 22 == GSSAPI ACCEPTOR SEAL
-		if !isValid {
-			return false, nil, err
-		}
-		response, err := gssapi.NewInitiatorWrapTokenV1(&challenge, s.encKey)
-		if err != nil {
-			return false, nil, err
-		}
-		marshalled, err := response.Marshal(s.encKey)
-		return true, marshalled, err // we are done, but we have one more response to write ourselves
 	default:
 		return false, nil, fmt.Errorf("challenge / response should be done, but still going at %d", step)
 	}
